@@ -6,9 +6,20 @@ import org.springframework.stereotype.Component;
 //@Component
 public class TaskManager {
 
-    private final Task task;
+    private Task task;
 
-//    @Autowired
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
+    }
+
+    public TaskManager() {
+    }
+
+    //    @Autowired
     public TaskManager(Task task) {
         this.task = task;
     }

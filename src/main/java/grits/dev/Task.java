@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 //@Component //в скобках после component можно указать название бина @Component("main-task")
 // по дефолту название класса но с маленькой буквы
 public class Task {
-    private final String name;
-    private final long duration;
+    private String name;
+    private long duration;
 
     public Task() {
         this.name = "task";
@@ -19,6 +19,13 @@ public class Task {
 
     public long getDuration() {
         return duration;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDuration(long duration) {
+        this.duration = duration;
     }
 
     @Override
